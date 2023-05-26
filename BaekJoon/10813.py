@@ -22,9 +22,7 @@
 import sys
 input = sys.stdin.readline
 N,  M = map(int,input().split())
-list_N = [0] + list()
-for i in range(1,N+1) :
-    list_N.append(int(i))
+list_N = list(range(N+1))
 
 for _ in range(M) :
     i, j = map(int,input().split())
