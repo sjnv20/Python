@@ -24,16 +24,13 @@
 '''
 area = [[0 for _ in range(101)] for _ in range(101)]
 N = int(input())
-all = 10000
 sum = 0
 for i in range(N) :
     x, y = list(map(int, input().split()))
     for j in  range(x, x+10) :
         for z in range(y, y+10) :
-            area[j][z] += 1
+            area[j][z] = 1
 
-for i in range(101) :
-    for j in range(101) :
-        if area[i][j] != 0 :
-            sum += 1
+for i in range(len(area)):
+    sum += area[i].count(1)
 print(sum)
