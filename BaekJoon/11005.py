@@ -24,8 +24,7 @@ n = []
 while True :
     n .append(N % B)
     N = N // B
-    if N // B == 0 :
-        n.append(N % B)
+    if N == 0 :
         break
 
 for i in range(len(n)-1, -1, -1):
